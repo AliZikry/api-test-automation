@@ -1,0 +1,7 @@
+# Node.js modules
+node_modules/
+
+# Cypress screenshots and videos
+cypress/screenshots/
+cypress/videos/
+

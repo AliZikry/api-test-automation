@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  cypress:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app # Allows to make changes in the local directory and see them in the container without rebuilding the image
+    command: ["npx", "cypress", "run"] # Run the tests in headless mode
+    environment:
+      - CI=true # This helps ensure the tests run in CI mode
